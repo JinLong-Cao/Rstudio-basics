@@ -1,12 +1,30 @@
 ---
 title: "Basics"
-output: html_document
+output: pdf_document
 date: "2023-03-17"
 author: Jin Long Cao
 ---
 
+## Introduction
+
+Rstudio is a statistical programming language used to create models and plots.
+
+## r setup
+
+Ctrl+Alt+i = insert a new code chunk.
+
+{r chunk-name, include=FALSE}\
+\# code goes here\
+\# include prevents code and results from appearing in the finished file. However, code in the chunk still runs and results can be used by other chunks.\
+\# echo prevents code but results are still displayed.
+
+
+First chunk of code will be used to setup rstudio packages and knitting settings. Ex: install.packages("tidyverse"). After first installation of package, it is always ideal to comment (\#) it out to reduce runtime (so it does not have to download the package every time you run). To use the packages, you are required to load it with library function.
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+#install.packages("tidyverse")
+library(tidyverse)
 ```
 
 ## R Markdown
