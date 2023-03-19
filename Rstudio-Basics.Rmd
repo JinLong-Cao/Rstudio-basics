@@ -17,26 +17,23 @@ knitr::include_graphics("images/Rstudio_IDE_screenshot.png")
 
 Rstudio interface can be broken down into 4 area.
 
-* **Top Left**: Main "saved" file. The file, you're currently working on.
+* **Top Left**: The file, you're currently working on.
   + file examples: r script, r markdown, python, and many more. 
-* **Top Right**:
-  + Environment:
-  + History:
-  + Connections:
-  + Git:
-  + Tutorial:
-* **Bottom Left**:
-  + Console:
-  + Terminal:
-  + Render:
-  + Background Jobs:
-* **Bottom Right**:
-  + Files:
-  + Plots:
-  + Packages:
-  + Help:
-  + Viewer:
-  + Presentation:
+* **Top Right**: Includes Environment, History, Connection, Git, Tutorial. 
+  + Environment: This is where all your variables, data, and values are displayed. 
+  + History: History of code ran.
+  + Git: Github connection.
+    + Diff: Display the difference between your current file and the file on github.
+    + Commit, pull, push: pull up to date file from github. Commit changes on current file to github. Push your committed changes to github. 
+* **Bottom Left**: Includes Console, Terminal, Render, Background Jobs.
+  + Console: The location of where code chucks are ran. Runs rstudio scripts.
+  + Terminal: Command terminal 
+  + Render: Knitting render location.
+* **Bottom Right**: Includes Files, Plot, Packages, Help, Viewer, Presentation
+  + Files: Display of your files.
+  + Plots: Display of your plots.
+  + Packages: List of Packages.
+  + Help: When help(xyz) function is ran. Display information about xyz
 
 ## r setup
 
@@ -50,10 +47,15 @@ Ctrl+Alt+i = insert a new code chunk.
 
 First chunk of code will be used to setup rstudio packages and knitting settings. For example, **install.packages("tidyverse")**, after first installation of package, it is always ideal to comment (\#) it out to reduce runtime (so it does not have to download the package every time you run). **library(tidyverse)**, to use the packages, you are required to load it with library function.
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 #install.packages("tidyverse")
 library(tidyverse)
+```
+
+```{r setup-image, echo=FALSE}
+knitr::include_graphics("images/setup-image.PNG")
 ```
 
 ## Github
